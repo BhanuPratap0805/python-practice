@@ -4,7 +4,7 @@ rock = "rock"
 paper = "paper"
 scissors = "scissors"
 
-user_choice = input("What do you choose ? Type 0 for rock, type 1 for paper and type 2 for scissors: ")
+user_choice = input("What do you choose ? Type 0 for rock, type 1 for paper and type 2 for scissors: \n")
 
 if user_choice == "0":
     print(rock)
@@ -18,7 +18,9 @@ computer_choice = random.choice(choices)
 
 print(computer_choice)
 
-if user_choice == "0" and computer_choice == "scissors":
+if user_choice >= "3" or user_choice < 0:
+    print("You typed an invalid number, you lose")
+elif user_choice == "0" and computer_choice == "scissors":
     print("You win")
 elif user_choice == "0" and computer_choice == "rock":
     print("Draw")
